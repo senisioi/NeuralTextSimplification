@@ -13,23 +13,38 @@ We present the first attempt at using sequence to sequence neural networks to mo
 ```
 
 ## Simplify Text | Generate Predictions (no GPUs needed)
-1 Checkout the OpenNMT source:
+1 OpenNMT dependencies
+    1.1 [Install Torch](http://torch.ch/docs/getting-started.html)
+    1.2 Install additional packages:
+```bash
+luarocks install tds
 ```
+2 Checkout the OpenNMT source:
+```bash
    git submodule init
    git submodule update
 ```
-2 Download the pre-trained released models [NTS]() and [NTS-w2v]() (this may take a while):
-```
+3 Download the pre-trained released models [NTS]() and [NTS-w2v]() (this may take a while):
+```bash
    python models/download.py
 ```
-3 Run translate.sh from the scripts dir:
-```
+4 Run translate.sh from the scripts dir:
+```bash
    cd src/scripts
    ./translate.sh
 ```
-4 Check the predictions in the results directory:
-```
+5 Check the predictions in the results directory:
+```bash
    cd ../../results_NTS
+```
+6 Run automatic evaluation metrics
+   6.1 Install the python requirements (only nltk is needed)
+```bash
+   pip install -r requirements.txt
+```
+   6.2 Run the evaluate script
+```bash
+   python src/evaluate.py ./data/test.en ./data/references/references.tsv ./predictions/
 ```
 
 ## Content of this Repository
