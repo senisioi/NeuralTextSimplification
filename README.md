@@ -14,6 +14,21 @@ We present the first attempt at using sequence to sequence neural networks to mo
 	}
 ```
 
+## Simplify text
+1 Checkout the OpenNMT source:
+```
+   git submodule init
+   git submodule update
+```
+2 Download the pre-trained released models [NTS]() and [NTS-w2v]():
+```
+   python models/download.py
+```
+3 Run the translate.sh script:
+```
+   cd src/scripts
+   ./translate.sh
+```
 
 
 ## Content 
