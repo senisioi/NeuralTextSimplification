@@ -1,6 +1,6 @@
-### About 
-src/download_modules.py is a script used to download the .t7 pre-trained NTS models used for text simplification.
-If for some reason, this download fails, please use the direct urls:
+### About
+This directory will contain the pre-trained modules downloaded using the **src/download_modules.py** script.
+If the automatic download fails, please try the direct urls:
     
 - for NTS
 ```
