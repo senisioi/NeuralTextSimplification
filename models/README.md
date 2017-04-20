@@ -5,7 +5,7 @@ If for some reason, this download fails, please use the direct urls:
 ```
 	https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM
 ```
-    - for [NTS-w2v](https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0)
+    - for [NTS w2v](https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0)
 ```
 	https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0
 ```
