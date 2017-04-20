@@ -8,7 +8,6 @@ from nltk.translate.bleu_score import *
 smooth = SmoothingFunction()
 from nltk import word_tokenize
 
-
 logging.basicConfig(format = u'[LINE:%(lineno)d]# %(levelname)-8s [%(asctime)s]  %(message)s', level = logging.NOTSET)
 
 def files_in_folder(mypath):
