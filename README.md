@@ -18,7 +18,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
    git submodule init
    git submodule update
 ```
-2 Download the pre-trained released models [NTS]() and [NTS-w2v]():
+2 Download the pre-trained released models [NTS]() and [NTS-w2v]() (this may take a while):
 ```
    python models/download.py
 ```
