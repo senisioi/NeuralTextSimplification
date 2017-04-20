@@ -1,9 +1,9 @@
 # Exploring Neural Text Simplification
 
-You may use either the latest [OpenNMT](https://github.com/OpenNMT/OpenNMT) and apply the patch in ./src/OpenNMT or you could use [our forked version](https://github.com/senisioi/OpenNMT/) that already contains the required changes.
-
 ## Abstract
-We present the first attempt at using sequence to sequence neural networks to model text simplification (TS). Unlike the previously proposed automated methods, our neural text simplification (NTS) systems are able to simultaneously perform lexical simplification and content reduction. An extensive human evaluation of the output has shown that NTS systems achieve almost perfect grammaticality and meaning preservation of output sentences and higher level of simplification than the state-of-the-art automated TS systems.
+We present the first attempt at using sequence to sequence neural networks to model text simplification (TS). Our models are trained on the wikipedia corpus
+
+Unlike the previously proposed automated methods, our neural text simplification (NTS) systems are able to simultaneously perform lexical simplification and content reduction. An extensive human evaluation of the output has shown that NTS systems achieve almost perfect grammaticality and meaning preservation of output sentences and higher level of simplification than the state-of-the-art automated TS systems.
 ```
 	@InProceedings{neural-text-simplification,
 	  author    = {Sergiu Nisioi and Sanja Štajner and Simone Paolo Ponzetto and Liviu P. Dinu},
@@ -14,7 +14,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
 	}
 ```
 
-## Simplify text
+## Simplify Text | Generate Predictions (no GPUs needed)
 1 Checkout the OpenNMT source:
 ```
    git submodule init
@@ -24,14 +24,17 @@ We present the first attempt at using sequence to sequence neural networks to mo
 ```
    python models/download.py
 ```
-3 Run the translate.sh script:
+3 Run translate.sh from the scrpts dir:
 ```
    cd src/scripts
    ./translate.sh
 ```
+4 Check your predictions in the results directory:
+```
+   cd ../../results_NTS
+```
 
-
-## Content 
+## Content of this Repository
 #### ./predictions
 Contains predictions from previous systems (Wubben et al., 2012), (Glavas and Stajner, 2015), and (Xu et al., 2016), and the generated predictions of the NTS models reported in the paper:
 - NTS_default_b5_h1 - the default model, beam size 5, hypothesis 1
@@ -66,7 +69,4 @@ Contains the OpenNMT config file. To train, please update the config file with t
 ```	
 - ./scripts - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
 - ./OpenNMT - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
-Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly:
-```
-	git clone https://github.com/senisioi/OpenNMT/
-```
+Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly.
