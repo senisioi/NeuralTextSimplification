@@ -22,7 +22,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
 ```
    python models/download.py
 ```
-3 Run translate.sh from the scrpts dir:
+3 Run translate.sh from the scripts dir:
 ```
    cd src/scripts
    ./translate.sh
