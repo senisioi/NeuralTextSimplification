@@ -4,6 +4,16 @@ You may use either the latest [OpenNMT](https://github.com/OpenNMT/OpenNMT) and 
 
 ## Abstract
 We present the first attempt at using sequence to sequence neural networks to model text simplification (TS). Unlike the previously proposed automated methods, our neural text simplification (NTS) systems are able to simultaneously perform lexical simplification and content reduction. An extensive human evaluation of the output has shown that NTS systems achieve almost perfect grammaticality and meaning preservation of output sentences and higher level of simplification than the state-of-the-art automated TS systems.
+```
+	@InProceedings{neural-text-simplification,
+	  author    = {Sergiu Nisioi and Sanja Štajner and Simone Paolo Ponzetto and Liviu P. Dinu},
+	  title     = {Exploring Neural Text Simplification Models},
+	  booktitle = {{ACL} {(2)}},
+	  publisher = {The Association for Computer Linguistics},
+	  year      = {2017}
+	}
+```
+
 
 
 ## Content 
@@ -19,6 +29,13 @@ Contains predictions from previous systems (Wubben et al., 2012), (Glavas and St
 
 #### ./data 
 Contains the training, testing, and [reference](https://github.com/cocoxu/simplification) sentences used to train and evaluate our models.
+
+#### ./models
+Contains a script to download the pre-trained models used to output the results reported in our paper.  
+```
+	python models/download.py
+```
+In case the download fails, you may use the direct links for [NTS](https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM) and [NTS-w2v](https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0)
 
 #### ./configs
 Contains the OpenNMT config file. To train, please update the config file with the appropriate data on your local system and run 
@@ -36,15 +53,4 @@ Contains the OpenNMT config file. To train, please update the config file with t
 	- ./OpenNMT - the patch with some changes that need to be applied to the latest checkout of OpenNMT. Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly:
 ```
 	git clone https://github.com/senisioi/OpenNMT/
-```
-
-## Cite
-```
-	@InProceedings{neural-text-simplification,
-	  author    = {Sergiu Nisioi and Sanja Štajner and Simone Paolo Ponzetto and Liviu P. Dinu},
-	  title     = {Exploring Neural Text Simplification Models},
-	  booktitle = {{ACL} {(2)}},
-	  publisher = {The Association for Computer Linguistics},
-	  year      = {2017}
-	}
 ```
