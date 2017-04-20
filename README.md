@@ -61,7 +61,7 @@ Contains the OpenNMT config file. To train, please update the config file with t
 #### ./src 
 - **train_word2vec.py** a script that creates a word2vec model from a local corpus, using gensim
 - **SARI.py** a copy of the [SARI](https://github.com/cocoxu/simplification) implementation
-- **evaluate.py evaluates** BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
+- **evaluate.py** evaluates BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
 ```
 	python evaluate.py ../data/test.en ../data/references/references.tsv ../predictions/
 ```	
