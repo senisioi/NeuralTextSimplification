@@ -60,15 +60,13 @@ Contains predictions from previous systems (Wubben et al., 2012), (Glavas and St
 #### ./data 
 Contains the training, testing, and [reference](https://github.com/cocoxu/simplification) sentences used to train and evaluate our models.
 
-#### ./models
-Contains a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session. In case the download.py script fails, you may use the direct links for [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E)
-
 #### ./configs
 Contains the OpenNMT config file. To train, please update the config file with the appropriate data on your local system and run 
 ```bash
 	th train -config $PATH_TO_THIS_DIR/configs/NTS.cfg
 ```
 #### ./src 
+- **download_models.py** a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session. In case the download script fails, you may use the direct links for [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E)
 - **train_word2vec.py** a script that creates a word2vec model from a local corpus, using gensim
 - **SARI.py** a copy of the [SARI](https://github.com/cocoxu/simplification) implementation
 - **evaluate.py** evaluates BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
