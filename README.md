@@ -19,14 +19,13 @@ We present the first attempt at using sequence to sequence neural networks to mo
     ```bash
 	luarocks install tds
     ```
-2. Checkout the OpenNMT source:
+2. Checkout this repository:
 ```bash
-   git submodule init
-   git submodule update
+   git clone --recursive https://github.com/senisioi/NeuralTextSimplification.git
 ```
-3. Download the pre-trained released models [NTS]() and [NTS-w2v]() (this may take a while):
+3. Download the pre-trained released models [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E) (this may take a while):
 ```bash
-   python models/download.py
+   python src/download_models.py ./models
 ```
 4. Run translate.sh from the scripts dir:
 ```bash
@@ -62,7 +61,7 @@ Contains predictions from previous systems (Wubben et al., 2012), (Glavas and St
 Contains the training, testing, and [reference](https://github.com/cocoxu/simplification) sentences used to train and evaluate our models.
 
 #### ./models
-Contains a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session. In case the download.py script fails, you may use the direct links for [NTS](https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM) and [NTS-w2v](https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0)
+Contains a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session. In case the download.py script fails, you may use the direct links for [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E)
 
 #### ./configs
 Contains the OpenNMT config file. To train, please update the config file with the appropriate data on your local system and run 
@@ -74,5 +73,5 @@ Contains the OpenNMT config file. To train, please update the config file with t
 - **SARI.py** a copy of the [SARI](https://github.com/cocoxu/simplification) implementation
 - **evaluate.py** evaluates BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
 - **./scripts** - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
-- **./OpenNMT** - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
+- **./patch** - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
 Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly.
