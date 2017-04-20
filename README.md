@@ -19,13 +19,13 @@ We present the first attempt at using sequence to sequence neural networks to mo
 ## Content 
 #### ./predictions
 Contains predictions from previous systems (Wubben et al., 2012), (Glavas and Stajner, 2015), and (Xu et al., 2016), and the generated predictions of the NTS models reported in the paper:
-	- NTS_default_b5_h1 - the default model, beam size 5, hypothesis 1
-	- NTS_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hipothesis 1
-	- NTS_SARI_b5_h2 - the SARI best ranked model, beam size 12, hipothesis 1
-	
-	- NTS-w2v_default_b5_h1 - the default model, beam size 5, hypothesis 1
-	- NTS-w2v_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hipothesis 1
-	- NTS-w2v_SARI_b12_h2 - the SARI best ranked model, beam size 12, hipothesis 2
+- NTS_default_b5_h1 - the default model, beam size 5, hypothesis 1
+- NTS_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hipothesis 1
+- NTS_SARI_b5_h2 - the SARI best ranked model, beam size 12, hipothesis 1
+
+- NTS-w2v_default_b5_h1 - the default model, beam size 5, hypothesis 1
+- NTS-w2v_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hipothesis 1
+- NTS-w2v_SARI_b12_h2 - the SARI best ranked model, beam size 12, hipothesis 2
 
 #### ./data 
 Contains the training, testing, and [reference](https://github.com/cocoxu/simplification) sentences used to train and evaluate our models.
@@ -43,14 +43,15 @@ Contains the OpenNMT config file. To train, please update the config file with t
 	th train -config $PATH_TO_THIS_DIR/configs/NTS.cfg
 ```
 #### ./src 
-	- train_word2vec.py a script that creates a word2vec model from a local corpus, using gensim
-	- SARI.py copy of the [SARI](https://github.com/cocoxu/simplification) implementation
-	- evaluate.py evaluates BLEU and SARI given a source file, a directory of predictions and a reference file in tsv format
+- train_word2vec.py a script that creates a word2vec model from a local corpus, using gensim
+- SARI.py copy of the [SARI](https://github.com/cocoxu/simplification) implementation
+- evaluate.py evaluates BLEU and SARI given a source file, a directory of predictions and a reference file in tsv format
 ```
 	python evaluate.py ../data/test.en ../data/references/references.tsv ../predictions/
 ```	
-	- ./scripts - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
-	- ./OpenNMT - the patch with some changes that need to be applied to the latest checkout of OpenNMT. Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly:
+- ./scripts - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
+- ./OpenNMT - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
+Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly:
 ```
 	git clone https://github.com/senisioi/OpenNMT/
 ```
