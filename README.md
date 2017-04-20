@@ -46,7 +46,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
        python src/evaluate.py ./data/test.en ./data/references/references.tsv ./predictions/
     ```
 
-## Content of this Repository
+## The Content of this Repository
 #### ./src 
 - **download_models.py** a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session. In case the download script fails, you may use the direct links for [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E)
 - **train_word2vec.py** a script that creates a word2vec model from a local corpus, using gensim
