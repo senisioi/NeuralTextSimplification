@@ -1,7 +1,8 @@
+#!/bin/bash
 CWD=`pwd`
 CUR_EXP=NTS
 DIRECTORY=`readlink -f ../../data`
-OPENNMT_PATH=
+OPENNMT_PATH=`readlink -f ../../OpenNMT`
 
 if [[ -z "${OPENNMT_PATH}" ]]; then 
   echo "OPENNMT_PATH is unset, please update base_conf.sh"; 

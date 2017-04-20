@@ -1,9 +1,10 @@
+#!/bin/bash
 source ./base_conf.sh
 
 if [[ -z "${GLOBAL_EMBED}" ]]; then 
-  echo "GLOBAL_EMBED path is not set.";
-  # download the Google Newse embeddings and set GLOBAL_EMBED to point to that path
-  # wget https://github.com/mmihaltz/word2vec-GoogleNews-vectors/blob/master/GoogleNews-vectors-negative300.bin.gz 
+  GLOBAL_EMBED=${DIRECTORY}/embed/GoogleNews-vectors-negative300.bin
+  echo "GLOBAL_EMBED path is not set. Maybe run download_global_embeddings.sh first?";
+  echo "The default is: "${GLOBAL_EMBED}
 fi 
 
 mkdir -p ${DIRECTORY}/embed

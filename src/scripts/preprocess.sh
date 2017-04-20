@@ -1,3 +1,4 @@
+#!/bin/bash
 source ./base_conf.sh
 
 cd $OPENNMT_PATH

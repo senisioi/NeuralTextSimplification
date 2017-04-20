@@ -1,3 +1,4 @@
+import os
 import requests
 import logging
 
@@ -46,10 +47,12 @@ def save_response_content(response, destination):
 '''
 
 if __name__ == "__main__":
+    out_dir = os.path.dirname(os.path.realpath(__file__))
+
     NTS_model = '0B_pjS_ZjPfT9QjFsZThCU0xUTnM' 
     NTS_model_output = 'NTS_epoch11_10.19.t7'
-    download_file_from_google_drive(NTS_model, NTS_model_output)
+    download_file_from_google_drive(NTS_model, os.path.join(out_dir, NTS_model_output))
 
     NTS_w2v_model = '0B_pjS_ZjPfT9U1pJNy1UdV9nNk0' 
     NTS_w2v_model_output = 'NTS-w2v_epoch11_10.20.t7'
-    download_file_from_google_drive(NTS_w2v_model, NTS_w2v_model_output)
+    download_file_from_google_drive(NTS_w2v_model, os.path.join(out_dir, NTS_w2v_model_output))
