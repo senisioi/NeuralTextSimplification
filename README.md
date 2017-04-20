@@ -1,9 +1,7 @@
 # Exploring Neural Text Simplification
 
 ## Abstract
-We present the first attempt at using sequence to sequence neural networks to model text simplification (TS). Our models are trained on the wikipedia corpus
-
-Unlike the previously proposed automated methods, our neural text simplification (NTS) systems are able to simultaneously perform lexical simplification and content reduction. An extensive human evaluation of the output has shown that NTS systems achieve almost perfect grammaticality and meaning preservation of output sentences and higher level of simplification than the state-of-the-art automated TS systems.
+We present the first attempt at using sequence to sequence neural networks to model text simplification (TS). Unlike the previously proposed automated methods, our neural text simplification (NTS) systems are able to simultaneously perform lexical simplification and content reduction. An extensive human evaluation of the output has shown that NTS systems achieve good grammaticality and meaning preservation of output sentences and higher level of simplification than the state-of-the-art automated TS systems. We train our models on the [Wikipedia corpus](http://ssli.ee.washington.edu/tial/projects/simplification) containing _good_ and _good partial_ alignments.
 ```
 	@InProceedings{neural-text-simplification,
 	  author    = {Sergiu Nisioi and Sanja Štajner and Simone Paolo Ponzetto and Liviu P. Dinu},
