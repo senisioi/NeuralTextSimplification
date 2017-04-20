@@ -27,7 +27,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
    cd src/scripts
    ./translate.sh
 ```
-4 Check your predictions in the results directory:
+4 Check the predictions in the results directory:
 ```
    cd ../../results_NTS
 ```
@@ -59,12 +59,12 @@ Contains the OpenNMT config file. To train, please update the config file with t
 	th train -config $PATH_TO_THIS_DIR/configs/NTS.cfg
 ```
 #### ./src 
-- train_word2vec.py a script that creates a word2vec model from a local corpus, using gensim
-- SARI.py copy of the [SARI](https://github.com/cocoxu/simplification) implementation
-- evaluate.py evaluates BLEU and SARI given a source file, a directory of predictions and a reference file in tsv format
+- **train_word2vec.py** a script that creates a word2vec model from a local corpus, using gensim
+- **SARI.py** a copy of the [SARI](https://github.com/cocoxu/simplification) implementation
+- **evaluate.py evaluates** BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
 ```
 	python evaluate.py ../data/test.en ../data/references/references.tsv ../predictions/
 ```	
-- ./scripts - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
-- ./OpenNMT - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
+- **./scripts** - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
+- **./OpenNMT** - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
 Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly.
