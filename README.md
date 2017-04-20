@@ -36,18 +36,18 @@ We present the first attempt at using sequence to sequence neural networks to mo
 #### ./predictions
 Contains predictions from previous systems (Wubben et al., 2012), (Glavas and Stajner, 2015), and (Xu et al., 2016), and the generated predictions of the NTS models reported in the paper:
 - NTS_default_b5_h1 - the default model, beam size 5, hypothesis 1
-- NTS_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hipothesis 1
-- NTS_SARI_b5_h2 - the SARI best ranked model, beam size 12, hipothesis 1
+- NTS_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hypothesis 1
+- NTS_SARI_b5_h2 - the SARI best ranked model, beam size 12, hypothesis 1
 
 - NTS-w2v_default_b5_h1 - the default model, beam size 5, hypothesis 1
-- NTS-w2v_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hipothesis 1
-- NTS-w2v_SARI_b12_h2 - the SARI best ranked model, beam size 12, hipothesis 2
+- NTS-w2v_BLEU_b12_h1 - the BLEU best ranked model, beam size 12, hypothesis 1
+- NTS-w2v_SARI_b12_h2 - the SARI best ranked model, beam size 12, hypothesis 2
 
 #### ./data 
 Contains the training, testing, and [reference](https://github.com/cocoxu/simplification) sentences used to train and evaluate our models.
 
 #### ./models
-Contains a script to download the pre-trained models used to output the results reported in our paper.  
+Contains a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session.
 ```
 	python models/download.py
 ```
