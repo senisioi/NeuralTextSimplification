@@ -39,7 +39,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
 6. Run automatic evaluation metrics
     1. Install the python requirements (only nltk is needed)
     ```bash
-       pip install -r requirements.txt
+       pip install -r src/requirements.txt
     ```
     2. Run the evaluate script
     ```bash
