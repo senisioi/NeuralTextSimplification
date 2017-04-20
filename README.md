@@ -1,6 +1,6 @@
 # Exploring Neural Text Simplification
 
-You may use either the latest [OpenNMT](https://github.com/OpenNMT/OpenNMT) and apply the patch in ./src/OpenNMT or [our forked OpenNMT](https://github.com/senisioi/OpenNMT/) wich we have used to report our results.
+You may use either the latest [OpenNMT](https://github.com/OpenNMT/OpenNMT) and apply the patch in ./src/OpenNMT or you could use [our forked version](https://github.com/senisioi/OpenNMT/) that already contains the required changes.
 
 ## Abstract
 We present the first attempt at using sequence to sequence neural networks to model text simplification (TS). Unlike the previously proposed automated methods, our neural text simplification (NTS) systems are able to simultaneously perform lexical simplification and content reduction. An extensive human evaluation of the output has shown that NTS systems achieve almost perfect grammaticality and meaning preservation of output sentences and higher level of simplification than the state-of-the-art automated TS systems.
