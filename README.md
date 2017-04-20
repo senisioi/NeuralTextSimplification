@@ -14,11 +14,11 @@ We present the first attempt at using sequence to sequence neural networks to mo
 
 ## Simplify Text | Generate Predictions (no GPUs needed)
 1. OpenNMT dependencies
-	1.1 [Install Torch](http://torch.ch/docs/getting-started.html)
-	2.1 Install additional packages:
-	```bash
+    1. [Install Torch](http://torch.ch/docs/getting-started.html)
+    2. Install additional packages:
+    ```bash
 	luarocks install tds
-	```
+    ```
 2. Checkout the OpenNMT source:
 ```bash
    git submodule init
@@ -38,14 +38,14 @@ We present the first attempt at using sequence to sequence neural networks to mo
    cd ../../results_NTS
 ```
 6. Run automatic evaluation metrics
-	6.1 Install the python requirements (only nltk is needed)
-	```bash
-	   pip install -r requirements.txt
-	```
-	6.2 Run the evaluate script
-	```bash
-	   python src/evaluate.py ./data/test.en ./data/references/references.tsv ./predictions/
-	```
+    1. Install the python requirements (only nltk is needed)
+    ```bash
+       pip install -r requirements.txt
+    ```
+    2. Run the evaluate script
+    ```bash
+       python src/evaluate.py ./data/test.en ./data/references/references.tsv ./predictions/
+    ```
 
 ## Content of this Repository
 #### ./predictions
