@@ -1,3 +1,4 @@
+import sys
 import os
 import requests
 import logging
@@ -39,20 +40,25 @@ def save_response_content(response, destination):
     to download the .t7 NTS models used for text simplification
     if for some reason, this doanload fails, please use the direct urls:
     - for NTS:
-        https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM
+        https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU
 
     -for NTS-w2v:
-        https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0
+        https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E
 
 '''
 
 if __name__ == "__main__":
-    out_dir = os.path.dirname(os.path.realpath(__file__))
-
-    NTS_model = '0B_pjS_ZjPfT9QjFsZThCU0xUTnM' 
+    try:
+        out_dir = sys.argv[1]
+        logging.info("Saving files to: " + out_dir)
+    except:
+        out_dir = os.path.dirname(os.path.realpath(__file__))
+        logging.info("Saving files to: " + out_dir)
+        
+    NTS_model = '0B_pjS_ZjPfT9dEtrbV85UXhSelU' 
     NTS_model_output = 'NTS_epoch11_10.19.t7'
     download_file_from_google_drive(NTS_model, os.path.join(out_dir, NTS_model_output))
 
-    NTS_w2v_model = '0B_pjS_ZjPfT9U1pJNy1UdV9nNk0' 
+    NTS_w2v_model = '0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E' 
     NTS_w2v_model_output = 'NTS-w2v_epoch11_10.20.t7'
     download_file_from_google_drive(NTS_w2v_model, os.path.join(out_dir, NTS_w2v_model_output))
