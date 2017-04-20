@@ -19,7 +19,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
     ```bash
 	luarocks install tds
     ```
-2. Checkout this repository:
+2. Checkout this repository including the submodules:
 ```bash
    git clone --recursive https://github.com/senisioi/NeuralTextSimplification.git
 ```
