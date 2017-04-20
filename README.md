@@ -73,5 +73,5 @@ Contains the OpenNMT config file. To train, please update the config file with t
 - **SARI.py** a copy of the [SARI](https://github.com/cocoxu/simplification) implementation
 - **evaluate.py** evaluates BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
 - **./scripts** - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
-- **./patch** - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
-Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly.
+- **./patch** - the patch with some changes that need to be applied, if you want to the with the latest checkout of OpenNMT. 
+Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) which comes directly as a submodule.
