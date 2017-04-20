@@ -62,24 +62,17 @@ Contains predictions from previous systems (Wubben et al., 2012), (Glavas and St
 Contains the training, testing, and [reference](https://github.com/cocoxu/simplification) sentences used to train and evaluate our models.
 
 #### ./models
-Contains a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session.
-```
-	python models/download.py
-```
-In case the download fails, you may use the direct links for [NTS](https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM) and [NTS-w2v](https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0)
+Contains a script to download the pre-trained models. The models are released to be usable on machines with or without GPUs. They can't be used to continue the training session. In case the download.py script fails, you may use the direct links for [NTS](https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM) and [NTS-w2v](https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0)
 
 #### ./configs
 Contains the OpenNMT config file. To train, please update the config file with the appropriate data on your local system and run 
-```
+```bash
 	th train -config $PATH_TO_THIS_DIR/configs/NTS.cfg
 ```
 #### ./src 
 - **train_word2vec.py** a script that creates a word2vec model from a local corpus, using gensim
 - **SARI.py** a copy of the [SARI](https://github.com/cocoxu/simplification) implementation
 - **evaluate.py** evaluates BLEU and SARI scores given a source file, a directory of predictions and a reference file in tsv format
-```
-	python evaluate.py ../data/test.en ../data/references/references.tsv ../predictions/
-```	
 - **./scripts** - contains some of our scripts that we used to preprocess the data, output translations, and create the concatenated embeddings
 - **./OpenNMT** - the patch with some changes that need to be applied to the latest checkout of OpenNMT. 
 Alternatively, one could use [our forked code](https://github.com/senisioi/OpenNMT/) directly.
