@@ -1,12 +1,12 @@
-### About 
-download.py is a script used to download the .t7 pre-trained NTS models used for text simplification.
-If for some reason, this download fails, please use the direct urls:
+### About
+This directory will contain the pre-trained modules downloaded using the **src/download_modules.py** script.
+If the automatic download fails, please try the direct urls:
     
 - for NTS
 ```
-	https://drive.google.com/file/d/0B_pjS_ZjPfT9QjFsZThCU0xUTnM
+	https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU
 ```
 - for NTS w2v
 ```
-	https://drive.google.com/file/d/0B_pjS_ZjPfT9U1pJNy1UdV9nNk0
+	https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E
 ```
