@@ -128,8 +128,3 @@ if __name__ == '__main__':
                     os.path.basename(refs).replace('.ref', '').replace("test_0_", "")
     print_scores(sari_test, "SARI\t" + whichone)
     print_scores(bleu_test, "BLEU\t" + whichone)
-
-
-
-
-
