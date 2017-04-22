@@ -3,7 +3,7 @@ source ./base_conf.sh
 
 RES_DIR=`readlink -f ../../results_${CUR_EXP}`
 mkdir -p $RES_DIR
-MODEL_PATH=`readlink -f /media/er/Data/simplification/paper/acl207/neural_TS/release_models/NTS_epoch11_10.19_release.t7`
+MODEL_PATH=`readlink -f ../../models/NTS_epoch11_10.19.t7`
 MODEL=${MODEL_PATH##*/}
 OUTPUT=${RES_DIR}/result_${MODEL}
 LOG_OUT=${RES_DIR}/result_${MODEL}.log
