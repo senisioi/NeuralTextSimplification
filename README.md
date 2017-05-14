@@ -7,7 +7,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
 	  author    = {Sergiu Nisioi and Sanja Štajner and Simone Paolo Ponzetto and Liviu P. Dinu},
 	  title     = {Exploring Neural Text Simplification Models},
 	  booktitle = {{ACL} {(2)}},
-	  publisher = {The Association for Computer Linguistics},
+	  publisher = {The Association for Computational Linguistics},
 	  year      = {2017}
 	}
 ```
