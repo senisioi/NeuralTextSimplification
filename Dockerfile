@@ -17,12 +17,13 @@ RUN cd ~/torch && ./install.sh && \
     ./luarocks install nn && \
     ./luarocks install tds
 
+RUN apt-get install -y uuid-dev
+
 RUN cd ~ && wget https://github.com/zeromq/zeromq2-x/releases/download/v2.1.11/zeromq-2.1.11.tar.gz && \
     tar -xvf zeromq-2.1.11.tar.gz && cd zeromq-2.1.11 && \
     ./configure && make && \ 
     make install && sudo ldconfig
     
-RUN apt-get install -y uuid-dev
 
 RUN luarocks install lua-zmq ZEROMQ_LIBDIR=/usr/local/lib ZEROMQ_INCDIR=/usr/local/include
 
