@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     wget \
     curl \
-    git
+    git \
+    software-properties-common
 
 RUN curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash -e
 RUN git clone https://github.com/torch/distro.git ~/torch --recursive
