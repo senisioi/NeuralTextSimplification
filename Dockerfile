@@ -25,10 +25,10 @@ RUN cd ~ && wget https://github.com/zeromq/zeromq2-x/releases/download/v2.1.11/z
     make install && sudo ldconfig
     
 
-RUN cd ~/torch/install/bin && luarocks install lua-zmq ZEROMQ_LIBDIR=/usr/local/lib ZEROMQ_INCDIR=/usr/local/include
+RUN cd ~/torch/install/bin && ./luarocks install lua-zmq ZEROMQ_LIBDIR=/usr/local/lib ZEROMQ_INCDIR=/usr/local/include
 
-RUN cd ~/torch/install/bin luarocks install restserver-xavante
-RUN cd ~/torch/install/bin luarocks install dkjson
+RUN cd ~/torch/install/bin ./luarocks install restserver-xavante
+RUN cd ~/torch/install/bin ./luarocks install dkjson
 
 RUN cd ~ && \
     git clone --recursive https://github.com/senisioi/NeuralTextSimplification.git && \
