@@ -23,7 +23,7 @@ We present the first attempt at using sequence to sequence neural networks to mo
 ```bash
    git clone --recursive https://github.com/senisioi/NeuralTextSimplification.git
 ```
-3. Download the pre-trained released models [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E) (this may take a while):
+3. Download the pre-trained released models [NTS](https://drive.google.com/open?id=0B_pjS_ZjPfT9dEtrbV85UXhSelU) and [NTS-w2v](https://drive.google.com/open?id=0B_pjS_ZjPfT9ZTRfSFp4Ql92U0E) (NOTE: when using the released pre-trained models, due to recent changes in third party software, the output of our systems might not be identical to the one reported in the paper.)
 ```bash
    python src/download_models.py ./models
 ```
